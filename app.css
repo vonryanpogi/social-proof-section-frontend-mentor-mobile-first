@@ -1,0 +1,386 @@
+:root{
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+    font-family: 'Spartan', sans-serif;
+    font-size: 15px;
+    margin: 10% 5% 10% 5%;
+    background-image: url("images/bg-pattern-top-mobile.svg"), url("images/bg-pattern-bottom-mobile.svg");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top left,right bottom ;
+    background-size: max(50%,300px);
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.main-article{
+    text-align: center;
+}
+h1{
+    color: var(--VeryDarkMagenta);
+    font-weight: 700;
+    line-height: 1em;
+    padding: 1em 2em 0.5em 2em;
+}
+.main-article p {
+    font-size: 14px;
+    line-height:1.5em ;
+    font-weight: 500;
+    color: hsla(300, 43%, 22%, 0.801);
+    padding: 0.5em 0.5em 1em 0.5em;
+}
+.star-section{
+    text-align: center;
+    padding: 1.5em 0 1.5em 0;
+    width: 100%;
+}
+.star-card{
+    margin-bottom: 1em;
+    padding-top: 1em;
+    width: 100%;
+    height: 100%;
+    background-color: var(--LightGrayishMagenta);
+    border-radius: 10px;
+}
+.star-image img{
+    padding: 0 1px 0 px;
+}
+.star-card h5{
+    color: var(--VeryDarkMagenta);
+    font-weight: 700;
+    padding-top: 0.3rem;
+    padding-bottom: 1em;
+}
+
+.comments{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.comment-card{
+    width: 100%;
+    height: 100%;
+    background-color: var(--VeryDarkMagenta);
+    margin: .5em 0 .5em 0;
+    border-radius: 10px;
+}
+
+.profile img{
+    border-radius: 50%;
+    margin-right: 1.5em;
+    height: 3.5em;
+}
+.profile{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    color: var(--White);
+    font-size: 12px;
+    font-weight: 500;
+    height: 100%;
+    padding: 2em 2.5em 2em 2.6em;
+}
+.profile div {
+    height: 3.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.profile div p:first-child{
+    padding-top: 5px;
+}
+.verified-buyer{
+    font-weight: 400;
+    color: var(--SoftPink);
+}
+.comment-text{
+    word-spacing: 2px;
+    font-weight: 500px;
+    line-height: 1.5em;
+    font-size: 12.5px;
+    color: var(--LightGrayishMagenta);
+    padding: 0 2.9em 2em 2.5em;
+}
+@media only screen and (min-width:620px) {
+    body{
+        margin: 3em 3em 2em 3em;
+    }
+    h1{
+        font-size: 2em;
+        padding: 5% 15% 5% 15%;
+    }
+    .main-article p {
+        padding: 0 10% 0 10%;
+    }
+    .star-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .star-card{
+        margin-bottom: 1em;
+        padding-top: .5em;
+        max-width: 531px;
+        height: 100%;
+    }
+    
+    .star-card h5{
+        padding-bottom: 0.5em;
+    }
+    .comment-card{
+        max-width: 530px;
+    }
+}
+
+@media only screen and (min-width:1024px) {
+    body{
+        margin: 5em 3em 4em 3em;
+        background-image: url("images/bg-pattern-top-desktop.svg"), url("images/bg-pattern-bottom-desktop.svg");
+        background-repeat: no-repeat, no-repeat;
+        background-position: top left,right bottom ;
+        background-size: max(50%,300px)
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+    }
+    .intro-rating{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .main-article{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        height: 220px;
+        text-align: left;
+    }
+    h1{
+        font-size: 2.5em;
+        padding: 0 4em 0 0;
+        max-width: 500px;
+    }
+    .main-article p {
+        padding: 0;
+        margin-top: 10px;
+        font-size: 13px;
+        padding-right: 5em;
+        max-width: 500px;
+    }
+    .star-image img {
+        padding: 0;
+    }
+    .star-section{
+        height: 220px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        margin-left: 2em;
+    }
+    .star-card{
+        border-radius: 10px;
+        width: 80%;
+        height:50px;
+        display: inline-flex;
+        padding: 1em 1em 1em 1em;
+    }
+    .star-card h5{
+        margin: 0 1em 0 1em;
+        font-weight: 700;
+    }
+    .star-section div:nth-child(2){
+        margin-left:3em ;
+    }
+    .star-section div:nth-child(3){
+        margin-left: 6em;
+    }
+    .comments{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+    }
+    .comment-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        width: 30%;
+    }
+    .profile{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        margin-top: 1em;
+        padding: 2em 3em 2em 3em;
+        
+    }
+    .comment-text{
+        line-height: 1.7em;
+        font-size: 14px;
+        padding: 0 2.5em 2em 2.5em;
+    }
+    .comments .comment-card:nth-child(2){
+        margin-top: 3em;
+
+    }
+    .comments .comment-card:nth-child(3){
+        margin-top: 6em;
+
+    }
+    
+}
+
+@media only screen and (min-width:1440px) {
+    body{
+        margin: 5em 7em 4em 7em;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        height: 100%;
+    }
+    .intro-rating{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+    .main-article{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        height: 260px;
+        text-align: left;
+    }
+    h1{
+        font-size: 3.5em;
+        padding: 0 2em 0 0;
+        max-width: 600px;
+        
+    }
+    .main-article p {
+        padding: 0;
+        margin-top: 1em;
+        font-size: 16px;
+        padding-right: 5em;
+        max-width: 600px;
+    }
+    .star-image img {
+        padding: 0 2px 0 2px;
+    }
+
+    .star-section{
+        height: 260px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items:flex-start;
+        margin-left: 5em;
+        width: 100%;
+    }
+    .star-section div:nth-child(2){
+        margin-left:4em ;
+    }
+    .star-section div:nth-child(3){
+        margin-left: 8em;
+    }
+    .star-card{
+        border-radius: 10px;
+        width: 450px;
+        height:50px;
+        display: inline-flex;
+        padding: 1em 1em 1em 1em;
+    }
+    .star-card h5{
+        margin: 0 2em 0 1em;
+        font-weight: 700;
+    }
+    .star-image{
+        margin:0 1.5em 0 1.5em;
+    }
+
+    .comments{
+        margin-top: 2.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    .comments .comment-card:nth-child(2){
+        margin-top: 2.5em;
+
+    }
+    .comments .comment-card:nth-child(3){
+        margin-top: 5em;
+
+    }
+    .comment-card{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100%;
+        width: 30%;
+        margin-bottom: 2.5em;
+    }
+    
+    .profile{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: auto;
+        margin-top: 1em;
+        padding: 2em 3em 2em 3em;
+        
+    }
+    .comment-text{
+        line-height: 1.7em;
+        font-size: 14px;
+        padding: 0 1.7em 2em 1.7em;
+    }
+    
+}
